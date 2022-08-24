@@ -50,7 +50,7 @@ console.log(Math.random() * 255);
 let str7 = "JavaScript";
 console.log(str7.charAt(Math.random() * str7.length));
 let str8 =
-    "1 1 1 1 1\
+  "1 1 1 1 1\
     2 1 2 4 8\
     3 1 3 9 27\
     4 1 4 16 64\
@@ -64,3 +64,13 @@ console.log(
   str9.substr(0, str9.indexOf("b") - 1) +
     str9.substr(str9.indexOf("b") + str10.length, str9.length)
 );
+let str11 =
+  "Love is the best thing in this world. Some found their love and some are still looking for their love.";
+console.log((str11.match(/love/gi) || []).length);
+console.log((str2.match(/all/gi) || []).length);
+const sentence =
+  "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
+console.log(sentence.replace(/[^a-zA-Z0-9 ]/gi, ""));
+var txt = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+var numb = txt.replace(/[a-zA-Z ]/gi, "").split(',');
+console.log(parseInt(numb[0])+parseInt(numb[1])+parseInt(numb[2]));
