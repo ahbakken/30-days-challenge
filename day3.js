@@ -72,3 +72,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 document.addEventListener("DOMContentLoaded", function (event) {
   document.querySelector("#result7").innerHTML = Date.now();
 });
+
+$("#calc-button").on("click", () => {
+  let calcH = document.getElementById(calcheight);
+  let calcL; = document.getElementById(calclength);
+  let result9 = 0.5*calcH*calcL;
+  document.addEventListener("DOMContentLoaded", function (event) {
+    document.querySelector("#result8").innerHTML = result9;
+  });
+});
