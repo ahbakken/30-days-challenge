@@ -86,17 +86,29 @@
       <li>
         Write a script that prompt the user to enter base and height of the
         triangle and calculate an area of a triangle (area = 0.5 x b x h).<br />
-        Enter base: 20 
-        Enter height: 10 <br />
+        Enter base: 20 Enter height: 10 <br />
         The area of the triangle is 100
         <div>
           <h4>Calculate a triangle area</h4>
           <label for="length"> Length </label>
-          <input type="number" id="calclenght" name="lenght"/><br />
+          <input type="number" id="calclenght" name="lenght" /><br />
           <label for="height"> Height </label>
           <input type="number" id="calcheight" name="height" /><br />
-          <button name="calculate" id="calc-button">Calculate</button>
-          <p id="result8"></p>
+          <button id="calc-button" onclick="calc()">Calculate</button>
+          <div>
+            <p>Result:</p>
+            <p id="result8"></p>
+            <script>
+              const calc = () => {
+                let inputH = document.querySelector("#calcheight");
+                let inputL = document.querySelector("#calclenght");
+
+                let num = inputH.value * inputL.value * 0.5;
+                
+                document.getElementById("result8").innerHTML = num;
+              };
+            </script>
+          </div>
         </div>
       </li>
       <li>
@@ -108,11 +120,38 @@
         Enter side b: 4<br />
         Enter side c: 3<br />
         The perimeter of the triangle is 12<br />
+        <div>
+          <h4>Calculate the perimeter of the triangle</h4>
+          <label for="a"> a </label>
+          <input type="number" id="calcA" name="a" /><br />
+          <label for="b"> b </label>
+          <input type="number" id="calcB" name="b" /><br />
+          <label for="c"> c </label>
+          <input type="number" id="calcC" name="c" /><br />
+          <button id="calc-button2" onclick="calc2()">Calculate</button>
+          <div>
+            <p>Result:</p>
+            <p id="result9"></p>
+            <script>
+              const calc2 = () => {
+                let inputA = parseInt(document.querySelector("#calcA").value);
+                let inputB = parseInt(document.querySelector("#calcB").value);
+                let inputC = parseInt(document.querySelector("#calcC").value);
+
+                let num2 = inputA + inputB + inputC;
+
+                document.getElementById("result9").innerHTML = num2;
+              };
+            </script>
+          </div>
       </li>
       <li>
         Get length and width using prompt and calculate an area of rectangle
         (area = length x width and the perimeter of rectangle (perimeter = 2 x
         (length + width))
+
+        <h4>Calculate the perimeter and area of a rectangle</h4>
+
       </li>
       <li>
         Get radius using prompt and calculate the area of a circle (area = pi x

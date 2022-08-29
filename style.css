@@ -39,6 +39,7 @@ li {
   border-radius: 4px;
 }
 
-#calc-button {
+#calc-button,
+#calc-button2 {
   margin-top: 0.6rem;
 }
