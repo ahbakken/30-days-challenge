@@ -145,27 +145,46 @@
             </script>
           </div>
       </li>
+      <!-- Doing prompts from now on, to get done with the challenge CX -->
       <li>
         Get length and width using prompt and calculate an area of rectangle
         (area = length x width and the perimeter of rectangle (perimeter = 2 x
         (length + width))
 
         <h4>Calculate the perimeter and area of a rectangle</h4>
+        <p>Area:</p>
+        <p id="result10"></p>   
+        <p>Perimiter:</p>
+        <p id="result11"></p>        
+        <!-- <script>
+          let length = parseInt(prompt("Enter lenght:"))
+          let width = parseInt(prompt("Enter width:"))
+          
+          let area = length*width
+          let perimeter = 2*(length+width)
+
+          document.getElementById("result10").innerHTML = area;
+          document.getElementById("result11").innerHTML = perimeter;
+        </script> -->
 
       </li>
-      <li>
+      <li>2
         Get radius using prompt and calculate the area of a circle (area = pi x
         r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
-      </li>
-      <li>Calculate the slope, x-intercept and y-intercept of y = 2x -2</li>
-      <li>
-        Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and
-        point(6,10)
-      </li>
-      <li>Compare the slope of above two questions.</li>
-      <li>
-        Calculate the value of y (y = x2 + 6x + 9). Try to use different x
-        values and figure out at what x value y is 0.
+
+        <h4>Calculate the area of a rectangle</h4>
+        <p>Circumference:</p>
+        <p id="result12"></p>        
+        <p>Area:</p>
+        <p id="result13"></p> 
+        <!-- <script>
+          let radius = parseInt(prompt("Enter radius to get circumference:"))
+          let circumference = 2*Math.PI*radius
+          let area = Math.PI*radius*radius
+          // console.log(circumference)
+          document.getElementById("result12").innerHTML = circumference;
+          document.getElementById("result13").innerHTML = area;
+        </script> -->
       </li>
       <li>
         Writ a script that prompt a user to enter hours and rate per hour.
@@ -174,10 +193,33 @@
         Enter hours: 40<br />
         Enter rate per hour: 28<br />
         Your weekly earning is 1120<br />
+
+        <h4>Calculate payment</h4>
+        <p>Pay:</p>
+        <p id="result14"></p>
+
+        <!-- <script>
+          let hours = parseInt(prompt("Enter hours:"))
+          let rate = parseInt(prompt("Enter rate:"))
+          let pay = (7*hours*rate)
+          document.getElementById("result14").innerHTML = pay;
+        </script> -->
+
       </li>
       <li>
         If the length of your name is greater than 7 say, your name is long else
         say your name is short.
+
+        <h4>Lenght of your name</h4>
+        <p id="result15"></p>
+        <!-- <script>
+          let nameLenght = prompt("Enter your name:");
+          let res = 'Your name is short';
+          if (nameLenght.length>7) {
+            res = 'Your name is long';
+          }
+          document.getElementById("result15").innerHTML = res;
+        </script> -->
       </li>
       <li>
         Compare your first name length and your family name length and you
@@ -185,8 +227,19 @@
 
         let firstName = 'Asabeneh'<br />
         let lastName = 'Yetayeh'<br />
-
         Your first name, Asabeneh is longer than your family name, Yetayeh<br />
+
+        <h4>Compare first and lastname</h4>
+          <p id="result16"></p>
+        <!-- <script>
+          let firstName = prompt("Enter your first name:");
+          let lastName = prompt("Enter your last name:");
+          let res = 'Your first name, ' + firstName + ' is longer than your family name, ' + lastName;
+          if (firstName.length<lastName.length) {
+            res = 'Your family name, ' + lastName  + ' is longer than your first name, ' + firstName;
+          }
+          document.getElementById("result16").innerHTML = res;
+        </script>         -->
       </li>
       <li>
         Declare two variables myAge and yourAge and assign them initial values
@@ -195,6 +248,16 @@
         let myAge = 250<br />
         let yourAge = 25<br />
         I am 225 years older than you.<br />
+
+        <h4>Age difference</h4>
+          <p id="result17"></p>
+        <script>
+          let myAge = 250
+          let yourAge = 25
+          difference = myAge-yourAge;
+          let sendDiff = 'I am '+difference+' years older than you.'
+          document.getElementById("result17").innerHTML = sendDiff;
+        </script>    
       </li>
       <li>
         Using prompt get the year the user was born and if the user is 18 or
@@ -206,6 +269,21 @@
 
         Enter birth year: 2005<br />
         You are 15. You will be allowed to drive after 3 years.<br />
+
+        <h4>Can you drive?</h4>
+          <p id="result18"></p>
+        <!-- <script>
+          let birthYear = parseInt(prompt("Enter birth year: "));
+          const currYear = new Date();
+          let age = currYear.getFullYear()-birthYear;
+
+          let res = 'You are ' + age + '. You will be allowed to drive';
+          if (age<18) {
+            let diff = 18-age;
+            res = 'You are ' + age + '. You will be allowed to drive after '+diff +' years.';
+          }
+          document.getElementById("result18").innerHTML = res;
+        </script> -->
       </li>
       <li>
         Write a script that prompt the user to enter number of years. Calculate
@@ -214,6 +292,17 @@
 
         Enter number of years you live: 100<br />
         You lived 3153600000 seconds.<br />
+
+        <h4>How long will you live?</h4>
+          <p id="result19"></p>
+        <!-- <script>
+          let age = parseInt(prompt("Enter your age: "));
+          const currYear = new Date();
+          let secLeft = (100-age)*31556926;
+
+          let res = 'You can live for ' + secLeft + ' seconds';
+          document.getElementById("result19").innerHTML = res;
+        </script> -->
       </li>
       <li>
         Create a human readable time format using the Date time object<br />
@@ -221,6 +310,27 @@
         YYYY-MM-DD HH:mm<br />
         DD-MM-YYYY HH:mm<br />
         DD/MM/YYYY HH:mm
+        <p id="result20"></p>
+        <p id="result21"></p>
+        <p id="result22"></p>
+
+
+        <script>
+          const now = new Date();
+          const year = now.getFullYear()
+          const month = now.getMonth() + 1
+          const date = now.getDate() 
+          const hours = now.getHours() 
+          const minutes = now.getMinutes()
+
+          let res1 = year+'-'+month+'-'+date+' '+hours+':'+minutes;
+          document.getElementById("result20").innerHTML = res1;
+          let res2 = date+'-'+month+'-'+year+' '+hours+':'+minutes;
+          document.getElementById("result21").innerHTML = res2;
+          let res3 = date+'/'+month+'/'+year+' '+hours+':'+minutes;
+          document.getElementById("result22").innerHTML = res3;
+        </script>
+
       </li>
     </ol>
   </body>
